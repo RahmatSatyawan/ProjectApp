@@ -1,4 +1,7 @@
+import "./CardContainer.css";
+
 import React from "react";
+
 import {
   IonCard,
   IonCardContent,
@@ -15,7 +18,7 @@ import {
 
 function Example() {
   return (
-    <IonCard color="dark">
+    <IonCard color="light">
       <IonCardHeader>
         <IonCardTitle>Card Title</IonCardTitle>
         <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
@@ -42,7 +45,9 @@ function Example() {
         </IonContent>
       </IonCardContent>
       <div>
-        <IonButton expand="block" color="light">Move to Todo</IonButton>
+        <IonButton expand="block" color="light">
+          Move to Todo
+        </IonButton>
         <IonButton expand="block" disabled={true} color="medium">
           Move to InProgress
         </IonButton>

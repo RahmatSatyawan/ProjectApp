@@ -1,43 +1,32 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonCol,
-  IonGrid,
-  IonRow,
-} from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
+import { IonContent, IonPage, IonCol, IonGrid, IonRow } from "@ionic/react";
 import CardContainer from "../components/CardContainer";
 import "./Home.css";
+import AnimatedShape from "../../public/AnimatedShape.svg";
 
 const Home: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">ProjectApp</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        {/* <ExploreContainer /> */}
         <IonGrid>
-          <IonRow>
-            <IonCol>
+          <IonRow
+            className="category-bg"
+            style={{ backgroundImage: `url(${AnimatedShape})` }}
+          >
+            <IonCol className="category">
               <h1>Todo</h1>
               <CardContainer />
+              <CardContainer />
+              <CardContainer />
+              <CardContainer />
+              <CardContainer />
             </IonCol>
-            <IonCol>
+            <IonCol className="category">
               <h1>InProgress</h1>
+              <CardContainer />
             </IonCol>
-            <IonCol>
+            <IonCol className="category">
               <h1>Finish</h1>
+              <CardContainer />
             </IonCol>
           </IonRow>
         </IonGrid>
