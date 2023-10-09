@@ -1,4 +1,4 @@
-.card-register {
+.card-login {
   max-width: 500px;
   margin: 0 auto;
 }
@@ -14,7 +14,10 @@ img {
   padding: 0 10px;
 }
 
-/* ion-card {
-  height: 100%;
-  /* margin: 15px;
-} */
+.group-login {
+  padding: 10px 10px;
+}
+
+a {
+  color: #fff;
+}

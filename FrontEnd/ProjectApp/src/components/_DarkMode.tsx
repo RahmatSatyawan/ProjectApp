@@ -1,4 +1,4 @@
-import { ToggleCustomEvent, IonList, IonItem, IonToggle } from '@ionic/react';
+import { ToggleCustomEvent, IonList, IonItem, IonToggle } from "@ionic/react";
 import React, { useEffect, useState } from "react";
 
 function DarkMode() {

@@ -1,13 +1,17 @@
 .nav {
   margin: 0;
-  padding: 0;
+  padding: 5px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* opacity: 0.9; */
 }
 
 .nav-menu {
   padding: 0 10px;
-  color: aliceblue;
+  color: #6a64ff;
+}
+
+.user {
 }
