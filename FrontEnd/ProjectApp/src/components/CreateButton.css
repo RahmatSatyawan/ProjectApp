@@ -1,12 +1,14 @@
 :root {
-  /**
-     * Setting the variables for DEMO purposes only.
-     * Values will be set automatically when building an iOS or Android app.
-     */
   --ion-safe-area-top: 20px;
   --ion-safe-area-bottom: 20px;
 }
 
 ion-fab {
   margin-bottom: var(--ion-safe-area-bottom, 0);
+}
+
+ion-fab-button {
+  --box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --color: black;
 }

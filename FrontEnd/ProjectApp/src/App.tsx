@@ -36,9 +36,12 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Create from "./pages/Create";
 import NotFoundPage from "./pages/NotFoundPage";
-import NavContainer from "./components/NavCotainer";
+import NavContainer from "./components/NavContainer";
 import CreateButton from "./components/CreateButton";
 import AboutUs from "./pages/AboutUs";
+
+import axios from "axios";
+import Detail from "./pages/Detail";
 
 setupIonicReact();
 
@@ -64,6 +67,9 @@ const App: React.FC = () => (
           <Route exact path="/create">
             <Create />
           </Route>
+          <Route exact path="/detail/:id">
+            <Detail />
+          </Route>
           {/* <Route path="/dashboard/users/:id" component={UserDetailPage} /> */}
           {/* <Route
           exact
@@ -72,7 +78,6 @@ const App: React.FC = () => (
             return isAuthed ? <DashboardPage {...props} /> : <LoginPage />;
           }}
         /> */}
-          {/* <IonNav root={() => <Home />}></IonNav> */}
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>

@@ -2,6 +2,29 @@
   background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
   border-radius: 5px;
-  margin: 20px;
   color: #222428;
+}
+
+.grid-flex {
+  display: flex;
+  gap: 15px; /* Adjust the gap size as needed */
+  justify-content: center;
+  max-width: 1400px;
+}
+
+.ion-grid {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* .max-width-fs {
+  width: 1200px;
+} */
+
+ion-grid {
+  /* display: flex; */
+  /* justify-content: center; */
+  --ion-grid-columns: 100;
 }

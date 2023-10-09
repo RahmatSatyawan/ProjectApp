@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Register.css";
 
 import {
@@ -10,8 +10,6 @@ import {
   IonCardTitle,
   IonContent,
   IonInput,
-  IonItem,
-  IonList,
   IonPage,
   IonText,
 } from "@ionic/react";
@@ -19,9 +17,27 @@ import {
 import WorldMap from "../../public/WorldMap.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Register = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleRegister = () => {
+    console.log("Register");
+    console.log("Logged in with:", name, email, password);
+
+    //clear the form
+    setName("");
+    setEmail("");
+    setPassword("");
+
+    // Perform login logic here
+    alert("Registered with: " + name + " " + email + " " + password);
+    // Send a POST request to create the task
+  };
+
   return (
     <IonPage className="ion-padding">
       <IonContent>
@@ -42,46 +58,47 @@ const Register = () => {
             </IonText>
           </IonCardHeader>
           <IonCardContent>
-            <IonItem>
+            <form className="group-register">
               <IonInput
-                // fill="outline"
-                labelPlacement="floating"
+                aria-label="Tertiary input"
+                color="tertiary"
+                labelPlacement="stacked"
                 label="Name"
                 placeholder="Enter name"
+                value={name}
+                onIonChange={(e) => setName(e.detail.value!)}
               ></IonInput>
-            </IonItem>
-            <IonItem>
               <IonInput
-                // fill="outline"
-                labelPlacement="floating"
-                label="Email input"
+                aria-label="Tertiary input"
+                color="tertiary"
+                labelPlacement="stacked"
+                label="Email"
                 type="email"
                 placeholder="Enter email@domain.com"
+                value={email}
+                onIonChange={(e) => setEmail(e.detail.value!)}
               ></IonInput>
-            </IonItem>
-            <IonList>
-              <IonItem>
-                <IonInput
-                  // fill="outline"
-                  labelPlacement="floating"
-                  label="Password input"
-                  type="password"
-                  value=""
-                  placeholder="Enter password"
-                ></IonInput>
-              </IonItem>
-            </IonList>
-            <IonButton expand="block">
-              <FontAwesomeIcon className="icon" icon={faEnvelope} />
+              <IonInput
+                aria-label="Tertiary input"
+                color="tertiary"
+                labelPlacement="stacked"
+                label="Password"
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onIonChange={(e) => setPassword(e.detail.value!)}
+              ></IonInput>
+            </form>
+            <IonButton expand="block" color="tertiary" onClick={handleRegister}>
+              <FontAwesomeIcon className="icon" icon={faUserPlus} />
               Register
             </IonButton>
-            <h3>
+            <span>
               Already got an account?{" "}
-              <IonButton expand="block">
-                <FontAwesomeIcon className="icon" icon={faEnvelope} />
+              <a href="/login" color="terniary">
                 Login
-              </IonButton>
-            </h3>
+              </a>
+            </span>
           </IonCardContent>
         </IonCard>
       </IonContent>

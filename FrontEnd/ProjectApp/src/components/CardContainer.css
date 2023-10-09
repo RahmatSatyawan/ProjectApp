@@ -10,3 +10,39 @@ ion-card-title {
 ion-card-subtitle {
   --color: #d1fff8;
 } */
+
+/* .ionic-card {
+  margin: 5px;
+  padding: 10px;
+  text-align: left;
+} */
+
+.ion-padding-accordion {
+  padding: 3px;
+  font-size: 13px;
+}
+
+.accordion-content {
+  padding: 0 10px;
+  font-size: 11px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+p {
+  margin: 5px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.title-content {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  /* background-color: #f1f1f1 !important;
+  color: #f1f1f1 !important;
+  margin: 0; */
+}

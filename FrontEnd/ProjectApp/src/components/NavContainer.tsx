@@ -1,33 +1,16 @@
 import "./NavContainer.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   IonButton,
   IonHeader,
-  IonContent,
   IonItem,
   IonLabel,
   IonPopover,
   IonRouterLink,
-  IonAccordionGroup,
-  IonAccordion,
-  IonText,
 } from "@ionic/react";
 
-import Home from "../pages/Home";
-import Create from "../pages/Create";
-import Login from "../pages/Login";
-// import { Link } from "react-router-dom";
-
-import {
-  personCircleOutline,
-  personCircle,
-  sunny,
-  sunnyOutline,
-} from "ionicons/icons";
-import type { ToggleCustomEvent } from "@ionic/react";
-import { Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faListCheck } from "@fortawesome/free-solid-svg-icons";
+import { faListCheck, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const NavContainer: React.FC = () => {
   return (
@@ -38,16 +21,15 @@ const NavContainer: React.FC = () => {
           icon={faListCheck}
           style={{ color: "#6a64ff" }}
         />
-        <IonText color="tertiary">TaskHub</IonText>
-        <IonRouterLink className="nav-menu" routerLink="/home">
-          Home
+        <IonRouterLink color="tertiary" className="nav-menu" routerLink="/home">
+          TaskHub
         </IonRouterLink>
         <IonRouterLink className="nav-menu" routerLink="/about-us">
           About Us
         </IonRouterLink>
       </div>
-      <IonButton color="tertiary" id="click-trigger">
-        Login/Register
+      <IonButton className="user" color="tertiary" id="click-trigger">
+        <FontAwesomeIcon className="icon" icon={faUser} />
       </IonButton>
       <IonPopover trigger="click-trigger" triggerAction="click">
         <IonItem routerLink="/">
@@ -63,7 +45,6 @@ const NavContainer: React.FC = () => {
           <IonLabel>Log Out</IonLabel>
         </IonItem>
       </IonPopover>
-      {/* <Link to="/register">User 1</Link> */}
     </IonHeader>
   );
 };

@@ -1,7 +1,6 @@
-/* .card-register {
+.card-register {
   max-width: 500px;
-  width: 500px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 img {
@@ -14,12 +13,11 @@ img {
 .icon {
   padding: 0 10px;
 }
-/* 
-.ion-padding {
-  padding: 200px;
-} */
 
-.card-register {
-  max-width: 500px;
-  margin: 0 auto;
+.group-register {
+  padding: 10px 10px;
+}
+
+a {
+  color: #fff;
 }
